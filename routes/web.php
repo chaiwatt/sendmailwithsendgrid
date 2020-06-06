@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::group(['prefix' => 'email'], function(){
     Route::get('send','MailController@Send')->name('mail.send');           
 }); 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
